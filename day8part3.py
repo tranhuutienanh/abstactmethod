@@ -19,10 +19,10 @@ class CreditCard(PaymentMethod):
 
     def authenticate(self):
         if self.authentication is True:
-            return "Thẻ đã được uỷ quyền"
+            print "Thẻ đã được uỷ quyền"
 
     def pay(self):
-        return f"Đã trả {self.amount} đồng"
+        print f"Đã trả {self.amount} đồng"
 
 
 class PayPal(PaymentMethod):
@@ -33,13 +33,13 @@ class PayPal(PaymentMethod):
 
     def authenticate(self):
         if self.authentication is True:
-            return "tài khoản đã được uỷ quyền"
+            print "tài khoản đã được uỷ quyền"
 
     def pay(self):
-        return f"Đã trả {self.amount} đồng"
+        print f"Đã trả {self.amount} đồng"
 
     def receiver(self):
-        return f"Đã chuyển tiền đến {self.receipent}"
+        print f"Đã chuyển tiền đến {self.receipent}"
 
 
 class CryptoWallet(PaymentMethod):
@@ -51,13 +51,13 @@ class CryptoWallet(PaymentMethod):
         
     def authenticate(self):
         if self.authentication is True:
-            return "Ví đã được uỷ quyền"
+            print "Ví đã được uỷ quyền"
 
     def pay(self):
-        return f"Đã bán {self.amount} coin {self.coin_name}"
+        print f"Đã bán {self.amount} coin {self.coin_name}"
 
     def account_balance(self):
-        return f"Tài khoản còn {self.balance} coin {self.coin_name}"
+        print f"Tài khoản còn {self.balance} coin {self.coin_name}"
 
 
 
